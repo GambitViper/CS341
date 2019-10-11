@@ -7,12 +7,18 @@ namespace Dentask.Models
     // Models returned by AccountController actions.
     public class ExternalLoginConfirmationViewModel
     {
+        [Display(Name = "Prefix")]
+        public string Prefix { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Display(Name = "Hometown")]
-        public string Hometown { get; set; }
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -85,8 +91,14 @@ namespace Dentask.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Display(Name = "Hometown")]
-        public string Hometown { get; set; }
+        [Display(Name = "Prefix")]
+        public string Prefix { get; set; }
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
     }
 
     public class ResetPasswordViewModel

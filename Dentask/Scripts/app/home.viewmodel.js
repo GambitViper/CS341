@@ -14,7 +14,7 @@
                     'Authorization': 'Bearer ' + app.dataModel.getAccessToken()
                 },
                 success: function (data) {
-                    self.myHometown('Your Hometown is : ' + data.hometown);
+                    self.myHometown('Your First Name is : ' + data.firstName);
                 }
             });
         });

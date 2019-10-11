@@ -44,7 +44,7 @@ namespace Dentask.Controllers
         public GetViewModel Get()
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
-            return new GetViewModel() { Hometown = user.Hometown };
+            return new GetViewModel() { Prefix = user.Prefix, FirstName = user.FirstName, LastName = user.LastName };
         }
     }
 }

@@ -18,11 +18,31 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Hometown, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.Prefix, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Hometown, new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.Prefix,
+                  new List<SelectListItem> {
+                       new SelectListItem { Value = "0" , Text = "Dr." },
+                       new SelectListItem { Value = "1" , Text = "Mr." },
+                       new SelectListItem { Value = "2" , Text = "Mrs." },
+                       new SelectListItem { Value = "3" , Text = "Ms." }
+                    },
+                  new { @class = "prefix-select form-control" }
+           )
         </div>
-    </div>    
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
